@@ -1,0 +1,51 @@
+
+main > section:first-child{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+                var(--article-width),
+                1fr
+            )
+        );
+    justify-items: center;
+    gap: var(--gap);
+}
+
+article{
+    background: white;
+    padding: var(--padding);
+    width: var(--article-width);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+article > .envio, article > .tendencia{
+    font-size: 0.5em;
+    width: fit-content;
+    border-radius: var(--radius);
+    padding: var(--padding-small);
+    font-weight: bold;
+    margin-top: -30px;
+}
+
+article > .envio{
+    color: green;
+    border: 1.5px solid green;
+}
+
+article > .tendencia{
+    background: orange;
+    color: white;
+}
+
+article > img{
+    width: 100%;
+}
+
+article >  .precio{
+    color: brown;
+    font-weight: bold;
+    font-size: 1.5em;
+}

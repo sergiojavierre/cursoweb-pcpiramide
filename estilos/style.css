@@ -1,0 +1,51 @@
+:root{
+    --padding:15px;
+    --padding-small:5px;
+    --radius: 5px;
+    --gap: 10px;
+    --article-width: 150px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'aside main'
+    'footer footer';
+    gap: var(--gap);
+    grid-template-columns: 1fr 8fr;
+    background: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+}
+
+.links > a{
+    padding: var(--padding);
+    border-radius: var(--radius);
+}
+
+.links > a:hover{
+    background: gray;
+    color:white;
+}
+
+aside{
+    grid-area: aside;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
